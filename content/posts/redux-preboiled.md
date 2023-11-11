@@ -3,7 +3,7 @@ tags: post
 layout: post
 date: 2019-04-15
 title: Introducing Redux Preboiled
-permalink: /p/redux-preboiled/
+permalink: /posts/redux-preboiled/
 description: |
   A collection of simple, TypeScript-friendly Redux helpers.
 ---
