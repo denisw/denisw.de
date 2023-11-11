@@ -58,6 +58,7 @@
   --color-primary: #bb6311;
   --color-background: #f5f2f0;
   --color-border: #d6cac2;
+  --color-text-light: #666;
   --font-body: 'PT Serif', serif;
   --font-heading: 'Open Sans', Arial, sans-serif;
   --font-monospace: Inconsolata, Consolas, Menlo, Moncao, monospace;
@@ -146,6 +147,21 @@ pre[class*="language-"] {
   border-radius: 9999px;
 }
 
+.site-footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--color-text-light);
+  font-family: var(--font-heading);
+}
+
+.site-footer p {
+  margin-bottom: 0rem;
+}
+
+
 /***********************************************************************
  * Homepage
  ***********************************************************************/
@@ -201,7 +217,7 @@ pre[class*="language-"] {
 }
 
 .home-post-date {
-  color: #666;
+  color: var(--color-text-light);
   font-size: 0.8rem;
   font-weight: 400;
   text-decoration: none;
