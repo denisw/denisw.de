@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>{% if title %}{{ title }} | {% endif %}Denis Washington</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon-180.png' | prepend: site.url }}">
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/images/favicon-192.png" sizes="192x192">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/site.css">
+    <link rel="stylesheet" href="/stylesheets/prism-dracula.css">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/atom+xml" title="Posts" href="/feed.xml" />
+
+    {% if tags contains "post" %}
+    {% include "post-metadata" %}
+    {% endif %}
+  </head>
+  <body>
+    {% include "header" %}
+    <main>
+      {{ content }}
+    </main>
+    {% include "footer" %}
+  </body>
+</html>

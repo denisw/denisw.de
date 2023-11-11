@@ -1,0 +1,31 @@
+---
+layout: layout.liquid
+eleventyImport:
+  collections: ["post"]
+---
+
+<aside class="home-about" aria-label="About">
+  <p class="home-about-intro">
+    <strong>Welcome!</strong> On this website, I share my writings on
+    software development.
+  </p>
+
+  <ul class="home-about-links">
+    <li><a href="/about">About me</a></li>
+    <li><a href="/feed.xml">RSS / Atom Feed</a></li>
+  </ul>
+</aside>
+
+<nav aria-label="Posts">
+  <ul class="home-posts">
+    {%- for post in collections.post reversed -%}
+    <li class="home-post">
+      <a href="{{ post.url}}">
+        <span class="home-post-title">{{ post.data.title }}</span>
+        <br>
+        <small class="home-post-date">{{ post.date | date: "%B %d, %Y" }}</small>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</nav>
