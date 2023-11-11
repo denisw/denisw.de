@@ -8,6 +8,7 @@
   "@type": "BlogPosting",
   "@id": {{ page.url | prepend: site.url | json }},
   "headline": {{ title | json }},
+  "description": {{ description | json }},
   "datePublished": {{ page.date | date: '%Y-%m-%d' | json }},
   "dateModified": {{ page.date | date: '%Y-%m-%d' | json }},
   "image": [{{ '/images/cover.jpg' | prepend: site.url  | json }}],
@@ -24,6 +25,7 @@
 <!-- OpenGraph (Facebook) -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ page.url | prepend: site.url }}">
 <meta property="og:image" content="{{ '/images/cover.jpg' | prepend: site.url }}">
 <meta property="og:article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
