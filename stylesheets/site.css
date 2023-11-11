@@ -157,11 +157,6 @@ pre[class*="language-"] {
   font-family: var(--font-heading);
 }
 
-.site-footer p {
-  margin-bottom: 0rem;
-}
-
-
 /***********************************************************************
  * Homepage
  ***********************************************************************/
@@ -211,7 +206,6 @@ pre[class*="language-"] {
 }
 
 .home-post-title {
-  /* font-weight: 700; */
   font-size: 1.1rem;
   text-decoration: underline;
 }

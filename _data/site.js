@@ -4,4 +4,5 @@ module.exports = ({ eleventy }) => ({
     (eleventy.env.runMode === "serve"
       ? "http://localhost:8080"
       : "https://denisw.de"),
+  date: new Date(),
 });
