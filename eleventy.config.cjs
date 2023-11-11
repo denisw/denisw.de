@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Assets
+  eleventyConfig.addPassthroughCopy("images/*.jpg");
   eleventyConfig.addPassthroughCopy("images/*.png");
   eleventyConfig.addPassthroughCopy("fonts/*.woff2");
   eleventyConfig.addPassthroughCopy("stylesheets/*.css");
