@@ -3,6 +3,6 @@ module.exports = ({ eleventy }) => ({
     process.env.SITE_URL ||
     (eleventy.env.runMode === "serve"
       ? "http://localhost:8080"
-      : "https://denisw.de"),
+      : "https://www.denisw.de"),
   date: new Date(),
 });
