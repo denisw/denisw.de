@@ -7,7 +7,7 @@
     <title>{% if title %}{{ title }} | {% endif %}Denis Washington</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon-180.png' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
     <link rel="icon" href="/images/favicon-32.png" sizes="32x32">
     <link rel="icon" href="/images/favicon-192.png" sizes="192x192">
     <meta name="theme-color" content="#ffffff">
@@ -18,6 +18,10 @@
 
     <!-- Feed -->
     <link rel="alternate" type="application/atom+xml" title="Posts" href="/feed.xml" />
+
+    <!-- GoatCounter (analytics) -->
+    <script data-goatcounter="https://denisw-de.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
     {% if tags contains "post" %}
     {% include "post-metadata" %}
