@@ -99,15 +99,22 @@ pre > code {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h1 {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1em 0 0.67em 0;
+}
+
+h3 {
+  font-size: 1.125rem;
   font-weight: 400;
   margin: 1em 0 0.67em 0;
 }
