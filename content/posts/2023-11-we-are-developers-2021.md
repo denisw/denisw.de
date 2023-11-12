@@ -4,6 +4,9 @@ layout: post
 date: 2023-11-12
 title: 'Talk: Kafka Streams Microservices @ We Are Developers World Congress 2021'
 permalink: /posts/we-are-developers-2021/
+description: |
+  In 2021, Olli Salonen and I gave a talk about Kafka Streams microserves
+  at We Are Developers World Congress.
 ---
 
 In 2021, my dear ex-colleague [Olli Salonen](https://www.linkedin.com/in/salonenolli/) and I gave a [talk](https://www.wearedevelopers.com/en/videos/168/kafka-streams-microservices) together at the We Are Developers World Congress, about our experience of creating an event-driven microservice platform using [Kafka Streams](https://kafka.apache.org/documentation/streams/). I noticed that I never linked to it from my blog, so I'll finally do it now. Better late than never!
