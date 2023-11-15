@@ -12,7 +12,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fonts/*.woff2");
   eleventyConfig.addPassthroughCopy("stylesheets/*.css");
 
-  // Redirects
+  // Headers & Redirects
+  eleventyConfig.addPassthroughCopy("_headers");
   eleventyConfig.addPassthroughCopy("_redirects");
 
   // Settings
