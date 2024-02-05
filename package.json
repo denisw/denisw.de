@@ -13,6 +13,6 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "eslint": "^8.54.0",
-    "prettier": "^3.2.4"
+    "prettier": "^3.2.5"
   }
 }
