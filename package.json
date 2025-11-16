@@ -6,7 +6,8 @@
     "start": "eleventy --serve",
     "build": "eleventy",
     "lint": "eslint '**/*.{js,cjs}'",
-    "prettier-check": "prettier --list-different '**/*.js' '**/*.cjs'"
+    "prettier-check": "prettier --list-different '**/*.js' '**/*.cjs'",
+    "deploy": "npm run build && rsync -crv _site/ root@vps:/var/www/denisw.de"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

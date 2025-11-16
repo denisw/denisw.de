@@ -1,5 +1,0 @@
-*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://gc.zgo.at; connect-src 'self' https://denisw-de.goatcounter.com/count; frame-ancestors 'none'
-  Strict-Transport-Security: max-age=31536000
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
