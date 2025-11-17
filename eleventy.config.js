@@ -1,7 +1,7 @@
-const rssPlugin = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
+import rssPlugin from "@11ty/eleventy-plugin-rss";
+import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
@@ -21,4 +21,4 @@ module.exports = function (eleventyConfig) {
       output: "_site",
     },
   };
-};
+}

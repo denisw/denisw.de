@@ -1,19 +1,20 @@
 {
   "name": "denisw.de",
   "homepage": "https://denisw.de/",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "lint": "eslint '**/*.{js,cjs}'",
-    "prettier-check": "prettier --list-different '**/*.js' '**/*.cjs'",
+    "lint": "eslint '**/*.js'",
+    "prettier-check": "prettier --list-different '**/*.js'",
     "deploy": "npm run build && rsync -crv _site/ root@vps:/var/www/denisw.de"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "eslint": "^8.54.0",
+    "eslint": "^9.39.1",
     "prettier": "^3.2.4"
   }
 }

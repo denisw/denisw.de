@@ -1,4 +1,4 @@
-module.exports = ({ eleventy }) => ({
+export default ({ eleventy }) => ({
   url:
     process.env.SITE_URL ||
     (eleventy.env.runMode === "serve"
