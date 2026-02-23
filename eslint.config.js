@@ -6,10 +6,10 @@ export default defineConfig([
   js.configs.recommended,
   {
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2024,
       sourceType: "module",
       globals: {
-        ...globals.es2021,
+        ...globals.es2024,
         ...globals.nodeBuiltin,
       },
     },
