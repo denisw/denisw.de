@@ -1,0 +1,278 @@
+/***********************************************************************
+ * Font Faces
+ ***********************************************************************/
+
+/* PT Serif */
+
+@font-face {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/pt-serif-v18-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/pt-serif-v18-latin-italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/pt-serif-v18-latin-700.woff2") format("woff2");
+}
+
+/* Open Sans */
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/open-sans-v36-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/open-sans-v36-latin-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inconsolata-v32-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+/***********************************************************************
+ * Theme
+ ***********************************************************************/
+
+:root {
+  --color-primary: #bb6311;
+  --color-background: #f5f2f0;
+  --color-border: #d6cac2;
+  --color-text-light: #666;
+  --font-body: "PT Serif", serif;
+  --font-heading: "Open Sans", Arial, sans-serif;
+  --font-monospace: Inconsolata, Consolas, Menlo, Moncao, monospace;
+}
+
+/***********************************************************************
+ * Global
+ ***********************************************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.875rem;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-wrap: pretty;
+}
+
+@media print {
+  @page {
+    size: A4;
+  }
+
+  html {
+    font-size: 1rem;
+  }
+}
+
+a,
+a:visited {
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1em 0 0.67em 0;
+}
+
+hgroup {
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+p,
+li {
+  margin: 0 0 1.1em 0;
+}
+
+li {
+  break-inside: avoid;
+}
+
+/***********************************************************************
+ * Classes
+ ***********************************************************************/
+
+.cv-header {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    "name intro"
+    "info intro";
+  gap: 1rem;
+  column-gap: 2rem;
+
+  h1 {
+    grid-area: name;
+    color: var(--color-primary);
+    margin: 0;
+  }
+
+  dl {
+    grid-area: info;
+
+    dt {
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+    }
+
+    dd {
+      margin: 0 0 1rem 0;
+      text-wrap: nowrap;
+    }
+  }
+
+  .intro {
+    grid-area: intro;
+    border-inline-start: 1px solid var(--color-border);
+    padding-inline-start: 2rem;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.experience-item {
+  margin-top: 1em;
+
+  &:not(:first-of-type) {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1em;
+  }
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+    .time-range {
+      order: -1;
+      margin: 0;
+      color: var(--color-text-light);
+      font-weight: bold;
+    }
+
+    .title {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--color-text-light);
+      margin: 0;
+    }
+  }
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+table.skills {
+  th,
+  td {
+    vertical-align: baseline;
+  }
+
+  th {
+    font-weight: normal;
+    text-align: start;
+    color: var(--color-text-light);
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 20ch;
+    padding-inline-end: 1em;
+  }
+
+  td {
+    vertical-align: baseline;
+  }
+
+  p.title {
+    font-weight: 700;
+    font-family: var(--font-heading);
+    margin-top: 0;
+    margin-bottom: 0.2em;
+  }
+
+  p.subtitle {
+    margin: 0em;
+    color: var(--color-text-light);
+    font-size: 0.875em;
+
+    &:last-of-type {
+      margin-bottom: 1em;
+    }
+  }
+}

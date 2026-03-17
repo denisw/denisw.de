@@ -1,0 +1,91 @@
+intro: |
+  **I love developing software, and I'm passionate about doing it well.** I have been practicing and enjoying the craft professionally for over 10 years, and as a hobby for almost 20. Yet I am still always on the lookout for ways to improve, be it through reading, hands-on practice, or teaching others.
+
+  My goal is to use my skills to help my colleagues and perhaps even the world at large to produce consistently high-quality software that solves real problems.
+
+experience:
+  - time: 2016 – Present
+    title: Futurice
+    subtitle:
+      - Full-Stack Developer (2016 – 2019)
+      - Senior Full-Stack Developer (2019 – 2022)
+      - Principal Developer (2022 – Present)
+    description: |
+      - Built web and mobile frontends and backends for various clients using different technology stacks, among them React and React Native, Node.js, Java with Spring and Python with Django.
+
+      - Acted as a Tech Lead in several projects, making architectural decisions, maintaining developer experience and setting guidelines with and for the team while doing hands-on coding.
+
+      *Notable projects:*
+
+      - **Bosch PRO360:** Helped architect and build Bosch Power Tools' core digital B2B services application and platform from scratch over four years, first as Lead Developer and then as Tech Lead. *(Tech stack: Java, Spring, Azure, Kafka, MongoDB, React, React Native)*
+
+      - **EnBW GenAI in Customer Care:** Contributed to proof-of-concept GenAI applications for the company's customer care agents, not only by writing code but also by championing and implementing software engineering practices such as linting, automated testing and Continuous Delivery. *(Tech stack: Python, LangChain, FastAPI, Azure)*
+
+  - time: 2013 – 2015
+    title: Fraunhofer-Institut für Zuverlässigkeit und Mikrointegration (IZM)
+    subtitle: [Developer Intern]
+    description: |
+      - Rewrote and significantly expanded a legacy PHP application for process planning and documentation.
+
+      - Introduced unit and end-to-end testing, linting, CI/CD, and other good software engineering practices absent during the previous iteration of the software.
+
+      - *Tech stack: Ruby, Rails, MS SQL Server, Cucumber*
+
+education:
+  - time: 2013 – 2015
+    title: M.Sc. Computer Science
+    subtitle: [Freie Universität Berlin]
+    description: |
+      - Degree grade: **2.0 (good)**
+      - Thesis grade: **1.3 (very good)**
+
+  - time: 2010 – 2013
+    title: B.Sc. Computer Science
+    subtitle: [Humboldt University of Berlin]
+    description: |
+      - Degree grade: **1.9 (good)**
+      - Thesis grade: **1.0 (very good)**
+
+open_source:
+  - title: Buddycoud HTTP API (Google Summer of Code 2012)
+    url: https://github.com/buddycloud/buddycloud-http-api
+    description: |
+      An HTTP API server for the XMPP-based Buddycloud social network, the initial implementation of which I built as part of Google's Summer of Code 2012 student program.
+
+  - title: Soya Programming Language
+    url: https://github.com/denisw/soyac
+    description: |
+      Compiler for a for a Java/C#-like toy programming language that I designed and built in my late teen years, written in C++ and using LLVM for code generation.
+
+skills:
+  - category: Languages
+    description: |
+      **German** (native), **English** (fluent)
+
+  - category: Programming Languages
+    description: |
+      Extensive professional experience using **JavaScript/TypeScript**, **HTML/CSS**, **Java** and **Python**; used C++ and Rust in personal projects.
+
+  - category: Frameworks and Libraries
+    description: |
+      Extensive professional experience using **React** & **React Native**, **Node.js**, **Spring**; intermediate knowledge of **Django** and **Rails**. Beginner-to-intermediate experience with AI frameworks (**LangChain**,
+      **Haystack**).
+
+  - category: Cloud Platforms
+    description: |
+      Most familiar with **Azure**, with **AWS** as a close second. Also worked with **Heroku**, **Cloudflare Workers / Pages** and **Netlify**.
+
+  - category: Databases
+    description: |
+      Intermediate knowledge of **PostgreSQL** and **MongoDB** as primary storage. Also worked with **Redis**, **Azure AI Search**
+
+  - category: Tools
+    description: |
+      Lots of hands-on experience with CI/CD tooling (**GitHub Actions**, **Azure Pipelines**), infrastructure-as-code (**Terraform**, **Pulumi**), and major container technologies (**Docker**, **Kubernetes**).
+
+misc: |
+  I was born and raised in Germany, but my father is American (hence my English-sounding last name). I have both German and US citizenship.
+
+  I have a wife and a one-year-old daughter.
+
+  I love strategic (preferably cooperative) board games, point-and-click adventures, and other types of playful puzzle solving with friends and family.

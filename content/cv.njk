@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV | Denis Washington</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/images/favicon-192.png" sizes="192x192">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/cv.css">
+  </head>
+
+  <body>
+    <header class="cv-header">
+      <h1>Denis Washington</h1>
+      <dl>
+        <dt>Location</dt>
+        <dd>Berlin, Germany</dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:denis@denisw.de">denis@denisw.de</a></dd>
+        <dt>Website</dt>
+        <dd><a href="https://denisw.de/">denisw.de</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://linkedin.com/in/dwashingtn">linkedin.com/in/dwashingtn</a></dd>
+      </dl>
+      <div class="intro">
+        {{ intro | markdown }}
+      </div>
+    </header>
+
+    <h2>Work Experience</h2>
+
+    <div>
+      {% for item in experience %}
+        <div class="experience-item">
+          <hgroup>
+            <h3 class="title"><b>{{ item.title }}</b></h3>
+            <p class="time-range">{{ item.time }}</td>
+            {% for subtitle in item.subtitle %}
+              <p class="subtitle">{{ subtitle }}</p>
+            {% endfor %}
+          </hgroup>
+          {{ item.description | markdown }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <h2>Education</h2>
+
+    <div>
+      {% for item in education %}
+          <div class="experience-item">
+            <hgroup>
+              <h3 class="title"><b>{{ item.title }}</b></h3>
+              <p class="time-range">{{ item.time }}</td>
+              {% for subtitle in item.subtitle %}
+                <p class="subtitle">{{ subtitle }}</p>
+              {% endfor %}
+            </hgroup>
+          </div>
+      {% endfor %}
+    </div>
+
+    <h2>Open-Source Projects & Contributions</h2>
+
+    <div>
+      {% for item in open_source %}
+        <div class="experience-item">
+          <hgroup>
+            <h3 class="title">{{ item.title }}</h3>
+            <p class="subtitle"><a href="{{ item.url }}">{{ item.url }}</a></p>
+          </hgroup>
+          {{ item.description | markdown }}
+        </div>
+      {% endfor %}
+    <div>
+
+    <h2>Technology Skills</h2>
+
+    <table class="skills">
+      {% for item in skills %}
+        <tr>
+          <th scope="row">{{ item.category }}</th>
+          <td>{{ item.description | markdown }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Misc</h2>
+    {{ misc | markdown }}
+  </body>
+</html>
