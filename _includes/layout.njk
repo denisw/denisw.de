@@ -23,15 +23,15 @@
     <script data-goatcounter="https://denisw-de.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-    {% if tags contains "post" %}
-    {% include "post-metadata" %}
+    {% if tags and "post" in tags %}
+    {% include "post-metadata.njk" %}
     {% endif %}
   </head>
   <body>
-    {% include "header" %}
+    {% include "header.njk" %}
     <main>
-      {{ content }}
+      {{ content | safe }}
     </main>
-    {% include "footer" %}
+    {% include "footer.njk" %}
   </body>
 </html>

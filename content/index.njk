@@ -1,5 +1,5 @@
 ---
-layout: layout.liquid
+layout: layout.njk
 eleventyImport:
   collections: ["post"]
 ---
@@ -18,14 +18,14 @@ eleventyImport:
 
 <nav aria-label="Posts">
   <ul class="home-posts">
-    {%- for post in collections.post reversed -%}
+    {% for post in collections.post  %}
     <li class="home-post">
-      <a href="{{ post.url}}">
+      <a href="{{ post.url }}">
         <span class="home-post-title">{{ post.data.title }}</span>
         <br>
-        <small class="home-post-date">{{ post.date | date: "%B %d, %Y" }}</small>
+        <small class="home-post-date">{{ post.date | humanDate }}</small>
       </a>
     </li>
-    {%- endfor -%}
+    {% endfor %}
   </ul>
 </nav>

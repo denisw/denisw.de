@@ -1,5 +1,5 @@
 ---
-layout: about.liquid
+layout: layout.njk
 ---
 
 # Hi, I am Denis.

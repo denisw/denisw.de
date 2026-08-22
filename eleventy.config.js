@@ -3,33 +3,60 @@ import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import YAML from "yaml";
 import markdownIt from "markdown-it";
 
-export default function (eleventyConfig) {
-  // Plugins
-  eleventyConfig.addPlugin(rssPlugin);
-  eleventyConfig.addPlugin(syntaxHighlightPlugin);
+export const config = {
+  dir: {
+    input: "content",
+    data: "../_data",
+    includes: "../_includes",
+    output: "_site",
+  },
+};
 
-  // Assets
-  eleventyConfig.addPassthroughCopy("images/*.jpg");
-  eleventyConfig.addPassthroughCopy("images/*.png");
-  eleventyConfig.addPassthroughCopy("fonts/*.woff2");
-  eleventyConfig.addPassthroughCopy("stylesheets/*.css");
+export default function (config) {
+  // === Plugins
 
-  // Data Files
-  eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
+  config.addPlugin(rssPlugin);
+  config.addPlugin(syntaxHighlightPlugin);
 
-  // Template Filters
+  // === Assets
+
+  config.addPassthroughCopy("images/*.jpg");
+  config.addPassthroughCopy("images/*.png");
+  config.addPassthroughCopy("fonts/*.woff2");
+  config.addPassthroughCopy("stylesheets/*.css");
+
+  // === Data Files
+
+  config.addDataExtension("yaml", (contents) => {
+    return YAML.parse(contents);
+  });
+
+  // === Template Filters
+
+  config.addFilter("absolute", function (value) {
+    const url = new URL(value, this.ctx.site.url);
+    return url.toString();
+  });
+
+  config.addFilter("humanDate", function (value) {
+    return new Date(value).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  });
+
+  config.addFilter("isoDate", function (value) {
+    const date = new Date(value);
+    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+  });
+
   const markdown = markdownIt({ html: true });
-  eleventyConfig.addFilter("markdown", function (value) {
+  config.addFilter("markdown", function (value) {
     return this.env.filters.safe(markdown.render(value));
   });
 
-  // Settings
-  return {
-    dir: {
-      input: "content",
-      data: "../_data",
-      includes: "../_includes",
-      output: "_site",
-    },
-  };
+  config.addFilter("year", function (value) {
+    return new Date(value).getFullYear();
+  });
 }
