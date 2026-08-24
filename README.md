@@ -1,31 +1,37 @@
 # denisw.de
 
-The personal website of Denis Washington, built with [Eleventy](https://11ty.dev/).
+The personal website of Denis Washington ([denisw.de](https://denisw.de/)).
 
-https://www.denisw.de
+## Tech Stack
+
+* Static site generator: [Build Awesome (Eleventy)](https://11ty.dev/)
+* Templating engine: [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## Deployment Setup
 
-The website is hosted at [statichost.eu](https://statichost.eu).
+The website is hosted on [bunny.net]. Its static files are stored in [Bunny
+Storage][bunny-storage] and served by [Bunny CDN][bunny-cdn], with redirects
+and response headers controlled through [edge rules].
 
-### Build Configuration
+To document the setup and make it reproducible, I created it using [OpenTofu]
+(a community fork of [Terraform]). The OpenTofu configuration can be found in
+the [`infrastructure/`](./infrastructure/) folder. For simplicity's sake, I am
+using storing OpenTofu state in a local file that is checked into version
+control; I have, however, used [state encryption][opentofu-encryption] in order
+to not accidentally expose any secrets.
 
-The build is configured at [`statichost.yml`](./statichost.yml). See the [statichost.eu docs][statichost-build-config] for a description of the available options.
+The built website is uploaded to Bunny Storage through its [S3-compatible
+API][bunny-s3], using [rclone]. See [`scripts/deploy.sh`](./scripts/deploy.sh).
 
-### Deploy Key
+Deployment of the website (but not of the infrastructure) on every push to the
+main branch is automated with GitHub Actions.
 
-To pull from this repositoy, statichost.eu generates a SSH key whose public part I had to add to the GitHub repository as a [deploy key](https://docs.github.com/de/authentication/connecting-to-github-with-ssh/managing-deploy-keys). The key is called "statichost.eu". See the [statichost.eu docs][statichost-git].
-
-### DNS Configuration
-
-The following custom domains are configured:
-
-- `www.denisw.de` (primary domain)
-- `denisw.de` (redirects to primary domain)
-
-As Domaisy does not support ALIAS domain record for apex (root) domains, I had to configure an A record to the statichost.eu main server instead. See the [statichost.eu docs][statichost-domains].
-
-[statichost-build-config]: https://www.statichost.eu/docs/build-config/
-[statichost-domains]: https://www.statichost.eu/docs/domains/
-[statichost-git]: https://www.statichost.eu/docs/git/
-[statichost-webhooks]: https://www.statichost.eu/docs/webhooks/
+[bunny-cdn]: https://bunny.net/CDN/
+[bunny-storage]: https://bunny.net/storage/
+[OpenTofu]: https://opentofu.org/docs/language/state/encryption/
+[Terraform]: https://developer.hashicorp.com/terraform
+[bunny-s3]: https://bunny.net/docs/storage/s3
+[bunny.net]: https://bunny.net/
+[edge rules]: https://bunny.net/docs/cdn/edge-rules
+[opentofu-encryption]: https://opentofu.org/docs/language/state/encryption/
+[rclone]: https://rclone.org/

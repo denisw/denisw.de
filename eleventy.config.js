@@ -18,7 +18,7 @@ export default function (config) {
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlightPlugin);
 
-  // === Assets
+  // === Passthrough Files
 
   config.addPassthroughCopy("fonts/*.woff2");
   config.addPassthroughCopy("images/*.{jpg,png,svg}");

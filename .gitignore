@@ -1,4 +1,16 @@
+# macOS
 .DS_Store
+
+# direnv
 .envrc
-_site
+
+# Node.js
 node_modules
+
+# Build output
+_site
+
+# OpenTofu
+.terraform
+*.tfstate.backup
+*.tfstate.*.backup

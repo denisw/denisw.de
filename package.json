@@ -8,7 +8,7 @@
     "build": "eleventy",
     "lint": "eslint '**/*.js'",
     "prettier-check": "prettier --list-different '**/*.js'",
-    "deploy": "npm run build && rsync -crv _site/ root@vps:/var/www/denisw.de"
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
