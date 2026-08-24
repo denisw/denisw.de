@@ -223,3 +223,17 @@ pre[class*="language-"] {
   font-weight: 400;
   text-decoration: none;
 }
+
+/***********************************************************************
+ * "About" Page
+ ***********************************************************************/
+
+.about-image {
+  margin-bottom: 0.5em;
+
+  @media (min-width: 480px) {
+    float: right;
+    width: 50%;
+    max-width: 15rem;
+  }
+}

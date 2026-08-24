@@ -20,9 +20,8 @@ export default function (config) {
 
   // === Assets
 
-  config.addPassthroughCopy("images/*.jpg");
-  config.addPassthroughCopy("images/*.png");
   config.addPassthroughCopy("fonts/*.woff2");
+  config.addPassthroughCopy("images/*.{jpg,png,svg}");
   config.addPassthroughCopy("stylesheets/*.css");
 
   // === Data Files
