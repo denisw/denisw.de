@@ -70,7 +70,7 @@
 
     <div>
       {% for item in open_source %}
-        <div class="experience-item">
+        <div class="experience-item" style="break-inside: avoid;">
           <hgroup>
             <h3 class="title">{{ item.title }}</h3>
             <p class="subtitle"><a href="{{ item.url }}">{{ item.url }}</a></p>
@@ -84,7 +84,7 @@
 
     <table class="skills">
       {% for item in skills %}
-        <tr>
+        <tr style="break-inside: avoid;">
           <th scope="row">{{ item.category }}</th>
           <td>{{ item.description | markdown }}</td>
         </tr>

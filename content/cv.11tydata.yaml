@@ -35,16 +35,10 @@ education:
   - time: 2013 – 2015
     title: M.Sc. Computer Science
     subtitle: [Freie Universität Berlin]
-    description: |
-      - Degree grade: **2.0 (good)**
-      - Thesis grade: **1.3 (very good)**
 
   - time: 2010 – 2013
     title: B.Sc. Computer Science
     subtitle: [Humboldt University of Berlin]
-    description: |
-      - Degree grade: **1.9 (good)**
-      - Thesis grade: **1.0 (very good)**
 
 open_source:
   - title: Buddycoud HTTP API (Google Summer of Code 2012)
@@ -86,6 +80,4 @@ skills:
 misc: |
   I was born and raised in Germany, but my father is American (hence my English-sounding last name). I have both German and US citizenship.
 
-  I have a wife and a one-year-old daughter.
-
-  I love strategic (preferably cooperative) board games, point-and-click adventures, and other types of playful puzzle solving with friends and family.
+  I love (preferably cooperative) board games, point-and-click adventures, and especially my wife and one-year-old daughter.
