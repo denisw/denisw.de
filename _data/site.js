@@ -3,6 +3,6 @@ export default ({ eleventy }) => ({
     process.env.SITE_URL ||
     (eleventy.env.runMode === "serve"
       ? "http://localhost:8080"
-      : "https://www.denisw.de"),
+      : "https://denisw.de"),
   date: new Date(),
 });
