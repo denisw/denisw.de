@@ -18,7 +18,7 @@ eleventyImport:
 
 <nav aria-label="Posts">
   <ul class="home-posts">
-    {% for post in collections.post  %}
+    {% for post in collections.post | reverse %}
     <li class="home-post">
       <a href="{{ post.url }}">
         <span class="home-post-title">{{ post.data.title }}</span>
