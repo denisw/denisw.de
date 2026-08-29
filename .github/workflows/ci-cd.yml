@@ -21,10 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check formatting (Prettier)
-        run: npm run prettier-check
+      - name: Check formatting (Oxfmt)
+        run: npm run format-check
 
-      - name: Run code linter (ESLint)
+      - name: Run code linter (Oxlint)
         run: npm run lint
 
   deploy:

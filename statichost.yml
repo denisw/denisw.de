@@ -1,6 +1,6 @@
 # https://www.statichost.eu/docs/build-config/
 image: node:lts
-command: 'npm ci && npm run build'
+command: "npm ci && npm run build"
 public: _site
 domains:
   - www.denisw.de

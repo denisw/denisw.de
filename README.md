@@ -4,8 +4,8 @@ The personal website of Denis Washington ([denisw.de](https://denisw.de/)).
 
 ## Tech Stack
 
-* Static site generator: [Build Awesome (Eleventy)](https://11ty.dev/)
-* Templating engine: [Nunjucks](https://mozilla.github.io/nunjucks/)
+- Static site generator: [Build Awesome (Eleventy)](https://11ty.dev/)
+- Templating engine: [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## Deployment Setup
 

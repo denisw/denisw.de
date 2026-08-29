@@ -5,52 +5,52 @@
 /* PT Serif */
 
 @font-face {
-  font-family: 'PT Serif';
+  font-family: "PT Serif";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/pt-serif-v18-latin-regular.woff2') format('woff2');
+  src: url("/fonts/pt-serif-v18-latin-regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PT Serif';
+  font-family: "PT Serif";
   font-style: italic;
   font-weight: 400;
-  src: url('/fonts/pt-serif-v18-latin-italic.woff2') format('woff2');
+  src: url("/fonts/pt-serif-v18-latin-italic.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'PT Serif';
+  font-family: "PT Serif";
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/pt-serif-v18-latin-700.woff2') format('woff2');
+  src: url("/fonts/pt-serif-v18-latin-700.woff2") format("woff2");
 }
 
 /* Open Sans */
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/open-sans-v36-latin-regular.woff2') format('woff2');
+  src: url("/fonts/open-sans-v36-latin-regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/open-sans-v36-latin-700.woff2') format('woff2');
+  src: url("/fonts/open-sans-v36-latin-700.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inconsolata';
+  font-family: "Inconsolata";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/inconsolata-v32-latin-regular.woff2') format('woff2');
+  src: url("/fonts/inconsolata-v32-latin-regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -59,8 +59,8 @@
   --color-background: #f5f2f0;
   --color-border: #d6cac2;
   --color-text-light: #666;
-  --font-body: 'PT Serif', serif;
-  --font-heading: 'Open Sans', Arial, sans-serif;
+  --font-body: "PT Serif", serif;
+  --font-heading: "Open Sans", Arial, sans-serif;
   --font-monospace: Inconsolata, Consolas, Menlo, Moncao, monospace;
 }
 
@@ -81,7 +81,8 @@ body {
   padding: 0 1rem;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--color-primary);
 }
 
@@ -97,7 +98,12 @@ pre > code {
   border: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 400;
 }

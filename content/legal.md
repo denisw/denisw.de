@@ -8,8 +8,8 @@ layout: layout.njk
 
 This website is owned by:
 
-*Denis Washington*<br>
-*__Email:__ [{{ me.email }}](mailto:{{ me.email }})*
+_Denis Washington_<br>
+_**Email:** [{{ me.email }}](mailto:{{ me.email }})_
 
 ## Privacy Policy
 

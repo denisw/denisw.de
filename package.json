@@ -1,25 +1,24 @@
 {
   "name": "denisw.de",
+  "private": true,
   "homepage": "https://denisw.de/",
   "type": "module",
-  "private": true,
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "lint": "eslint '**/*.js'",
-    "prettier-check": "prettier --list-different '**/*.js'",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format-check": "oxfmt --check",
     "deploy": "./deploy.sh"
+  },
+  "dependencies": {
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.0.0",
-    "globals": "^17.3.0",
-    "prettier": "^3.2.4"
-  },
-  "dependencies": {
-    "yaml": "^2.8.2"
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0"
   }
 }

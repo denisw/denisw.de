@@ -12,6 +12,6 @@ For me, the key to creating great software is to keep things simple and clear - 
 
 Other than on this site, you can find me online at:
 
-* [GitHub](https://github.com/denisw)
-* [LinkedIn](https://linkedin.com/in/dwashingtn)
-* [DEV Community](https://dev.to/denisw)
+- [GitHub](https://github.com/denisw)
+- [LinkedIn](https://linkedin.com/in/dwashingtn)
+- [DEV Community](https://dev.to/denisw)
